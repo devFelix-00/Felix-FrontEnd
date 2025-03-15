@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create Account Page</title>
+    <link rel="stylesheet" href="Create account.css" />
+  </head>
+  <body>
+    <div class="outer-wrapper">
+    <div class="internal-wrapper">
+      <form action="./home.html" onsubmit="return validateForm()" name="myForm">
+        <span class="tag">Start for free</span>
+        <h1>Create new account</h1>
+        <div class="upper-input-wrapper">
+          <div class="input-wrapper">
+            <label for="f_name" name="f_name">
+              <input
+                type="text"
+                name="f_name"
+                id="f_name"
+                placeholder="first name"
+              /><span><img src="Images/icons/user icon.svg" /></span>
+            </label>
+          </div>
+          <div class="input-wrapper">
+            <label for="l_name" name="l_name">
+              <input
+                type="text"
+                name="l_name"
+                id="l_name"
+                placeholder="last name"
+              /><span><img src="Images/icons/user icon.svg" /></span>
+            </label>
+          </div>
+        </div>
+        <div class="input-wrapper">
+          <label for="email" name="email">
+            <input
+              type="text"
+              name="email"
+              id="email"
+              placeholder="Email"
+            /><span><img src="Images/icons/email icon.svg" /></span>
+          </label>
+        </div>
+        <div class="input-wrapper">
+          <label for="password" name="password">
+            <input
+              type="password"
+              name="password"
+              id="password"
+              placeholder="Password"
+            />
+          </label>
+          <p>
+            Already have an account?<span class="sign-in"
+              ><a href="sign-up.html">sign in</a></span
+            >
+          </p>
+        </div>
+
+        <div class="input-wrapper submit-btn">
+          <label for="submit" name="submit">
+           <input
+                type="submit"
+                name="submit"
+                id="submit"
+                value="Create account"
+                onclick="validateForm()"
+              />
+          </label>
+        </div>
+      </form>
+    </div>
+  </div>
+    <script>
+      function validateForm() {
+        var firstName = document.forms["myForm"]["f_name"].value;
+        var lastName = document.forms["myForm"]["l_name"].value;
+        var email = document.forms["myForm"]["email"].value;
+        var password = document.forms["myForm"]["password"].value;
+
+        if (firstName == "") {
+          alert("First name must be filled out");
+          return false;
+        }
+        if (lastName == "") {
+          alert("Last name must be filled out");
+          return false;
+        }
+        if (email == "") {
+          alert("Email must be filled out");
+          return false;
+        }
+        if (password == "") {
+          alert("Password must be filled out");
+          return false;
+        }
+      }
+    </script>
+  </body>
+</html>
