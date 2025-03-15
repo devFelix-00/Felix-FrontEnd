@@ -1,0 +1,171 @@
+* {
+  box-sizing: border-box;
+  max-width: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif, Tahoma, sans-serif;
+  max-width: 100%;
+  background-image: linear-gradient(#712fe3, #f60d63);
+}
+h1 {
+  font-size: 45px;
+  color: #fff;
+}
+.left-side p {
+  font-size: 18px;
+  padding: 0 2px;
+  color: #fff;
+  margin-top: -10px;
+}
+.right-side p {
+  font-weight: 600;
+}
+span {
+  font-size: 20px;
+  position: relative;
+  left: 2px;
+  font-style: italic;
+}
+.internal-wrapper {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-between;
+  width: 100%;
+  padding: 5px 11px 50px;
+  margin: 0 0px;
+}
+.left-side {
+  width: 100%;
+  padding: 10px 40px;
+}
+.right-side {
+  max-width: 100%;
+  padding: 30px 1px;
+  position: relative;
+  background-color: #fff;
+  border-radius: 30px;
+  margin: 2px auto;
+  top: 5px;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-around;
+}
+.input-container {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-around;
+  width: 100%;
+  padding: 0 30px;
+}
+.header {
+  position: relative;
+  left: 24px;
+  font-size: 20px;
+}
+.input-container input {
+  width: 100%;
+  margin: 15px 0;
+  border: 1px solid #cac8c8;
+  border-radius: 8px;
+  padding: 8px;
+}
+.input-container input:focus {
+  border-color: aqua;
+}
+.checkbox-container {
+  padding: 10px 36px;
+}
+.checkbox-container .option-2 {
+  position: relative;
+  left: 63px;
+}
+.comment-section {
+  padding: 10px 20px;
+}
+.comment-section textarea {
+  border: 1px solid #cac8c8;
+}
+
+.btn-wrapper {
+  width: 90%;
+  margin: auto;
+}
+.btn-wrapper input {
+  width: 100%;
+  padding: 10px 20px;
+  font-size: 25px;
+  border-radius: 10px;
+  border: none;
+  color: #fff;
+  background-color: #fc4d73;
+  border: 1px solid #f2335c;
+}
+.btn-wrapper input:hover {
+  border: 1px solid #000;
+  background-color: #fff;
+  color: #000;
+}
+
+@media screen and (min-width: 650px) and (max-width: 1200px) {
+  body {
+    padding: 8px;
+    margin: 15px;
+  }
+  .internal-wrapper {
+    flex-direction: row;
+    margin: -25px 3px;
+  }
+  .left-side {
+    width: 48%;
+  }
+  .right-side {
+    width: 52%;
+    padding: 16px 0px;
+  }
+  h1 {
+    font-size: 37px;
+    color: #fff;
+    margin-top: 40px;
+  }
+  .left-side p {
+    font-size: 17px;
+    color: #fff;
+  }
+}
+@media screen and (min-width: 1201px) {
+  .internal-wrapper {
+    width: 100%;
+    flex-direction: row;
+    margin: 7px;
+    padding: 30px;
+  }
+  .right-side {
+    width: 48%;
+    margin: 10px;
+  }
+  .left-side {
+    width: 50%;
+  }
+  .left-side p {
+    font-size: 25px;
+  }
+  h1 {
+    font-size: 50px;
+  }
+  .comment-section {
+    width: 100%;
+    position: relative;
+    left: 18px;
+  }
+  .checkbox-container {
+    width: 100%;
+  }
+  .btn-wrapper {
+    width: 92%;
+    position: relative;
+    left: 10px;
+  }
+}

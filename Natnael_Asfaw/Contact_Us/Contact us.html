@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us Page</title>
+    <link rel="stylesheet" href="Contact us.css" />
+  </head>
+  <body>
+    <div class="internal-wrapper">
+      
+      <div class="left-side">
+        <h1>Contact Us</h1>
+        <p>
+          Get in touch with us! Whether you have questions, feedback, or just
+          want to say hello, we're here for you.
+        </p>
+      </div>
+      <div class="right-side">
+        <div class="header"><h2><span>NADX Community</span><br>Send us a message</h2></div>
+        <form action="/" onsubmit="return validateForm()" name="myForm">
+        <div class="input-container">
+          <label for="full_name" name="full_name">
+            <input
+              type="text"
+              name="full_name"
+              id="full_name"
+              placeholder="Name"
+              required
+            />
+          </label>
+          
+          <label for="Email" name="Email">
+            <input
+              type="email"
+              id="Email"
+              name="Email"
+              placeholder="Email"
+              required
+            />
+          </label>
+          <label for="phone_number" name="phone_number">
+            <input
+              type="text"
+              id="phone_number"
+              name="phone_number"
+              placeholder="Phone"
+              required
+            />
+          </label>
+
+        </div>
+        <div class="checkbox-container">
+          <p>Preferred contact method of communication</p>
+          <form action="" onsubmit="return validateForm()" name="myForm">
+          <label for="contact_method" name="contact_method" class="option-1">
+            <input type="radio" id="contact_method" name="contact_method" />
+            Email
+            <label for="contact_method" class="option-2">
+              <input type="radio" id="contact_method" name="contact_method" />
+              Phone
+            </label>
+          </label>
+        </form>
+        </div>
+        <div class="comment-section">
+          <textarea
+            name="comment-section"
+            id="comment-section"
+            rows="10"
+            cols="78"
+            placeholder=" message"
+          ></textarea>
+        </div>
+        <form action="" onsubmit="return validateForm()" name="myForm">
+        <div class="btn-wrapper">
+          <label for="submit" name="submit">
+            <input type="submit" id="submit" name="submit" value="Submit" onclick=" validateForm()")
+            "/>
+          </label>
+        </div>
+      </form>
+      </div>
+    </div>
+    <script>
+      function validateForm() {
+          
+          var x = document.forms["myForm"]["full_name"].value;
+          var y = document.forms["myForm"]["Email"].value;
+          var z = document.forms["myForm"]["phone_number"].value;
+          var w = document.forms["myForm"]["contact_method"].value;
+          
+      if (x == "") {
+        alert("Name must be filled out");
+        return false;
+        } 
+      if (y == "") {
+          alert("Email must be filled out");
+          return false;
+        }
+      if (z == "") {
+        alert("Phone must be filled out");
+        return false;
+        }
+      if (w == "") {
+        alert("Contact method must be filled out");
+        return false;
+      }
+      }
+    </script>
+  </body>
+</html>
