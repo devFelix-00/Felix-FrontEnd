@@ -1,0 +1,112 @@
+     * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: Verdana, Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f7f7f7;
+            padding: 10px;
+        }
+        .container {
+            max-width: 400px;
+            width: 100%;
+            background-color: white;
+            border-radius: 20px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            text-align: center;
+        }
+        .upper-section {
+            background-color: #EE257D;
+            padding: 20px;
+        }
+        .img-box img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 5px solid white;
+            object-fit: cover;
+        }
+        .lower-section {
+            padding: 20px;
+        }
+        .user h1 {
+            font-size: 22px;
+            margin: 10px 0 5px;
+        }
+        .user .username {
+            color: gray;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+        .social-link a {
+            margin: 0 8px;
+            font-size: 20px;
+            color: black;
+            transition: color 0.3s;
+        }
+        .social-link a:hover:nth-child(1) { color: #4267B2; }
+        .social-link a:hover:nth-child(2) { color: #007AB5; }
+        .social-link a:hover:nth-child(3) { color: #1DA1F2; }
+        .social-link a:hover:nth-child(4) { color: #E73A5A; }
+        .social-link a:hover:nth-child(5) { color: #30A4DA; }
+        
+        .lower-content {
+            font-size: 14px;
+            color: #555;
+            margin: 15px 0;
+        }
+        .btn-wrapper {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+        }
+        .btn-wrapper button {
+            padding: 10px 20px;
+            border-radius: 20px;
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .btn-wrapper button:nth-child(1) {
+            background-color: #E90063;
+            color: white;
+        }
+        .btn-wrapper button:nth-child(1):hover {
+            background-color: white;
+            color: black;
+            border: 1px solid #E90063;
+        }
+        .btn-wrapper button:nth-child(2) {
+            background-color: white;
+            color: black;
+            border: 1px solid #E90063;
+        }
+        .btn-wrapper button:nth-child(2):hover {
+            background-color: #E90063;
+            color: white;
+        }
+
+        
+        @media (max-width: 500px) {
+            .container {
+                width: 90%;
+            }
+            .social-link a {
+                font-size: 18px;
+                margin: 0 5px;
+            }
+            .btn-wrapper {
+                flex-direction: column;
+            }
+            .btn-wrapper button {
+                width: 100%;
+            }
+        }
+  
